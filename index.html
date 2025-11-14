@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Tiago Morais Tattoo</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Tatuador especialista em realismo. Agende seu horário via WhatsApp." />
+    <link rel="icon" type="image/png" href="./imagens/logo sem fundo.png">
+
+</head>
+
+<body>
+    <!-- Header / Menu -->
+    <header id="main-header" class="header">
+        <div class="header-inner">
+            <div class="logo-container">
+                <img src="./imagens/logo sem fundo.png" alt="Logo Estúdio Realismo" class="logo-img">
+                <div class="logo-text">THIAGO MORAIS <span> TATTOO</span></div>
+            </div>
+
+            <nav class="nav" id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link">Início</a></li>
+                    <li><a href="#services" class="nav-link">Serviços</a></li>
+                    <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="contact-fixed">
+                <a id="fixed-whatsapp" href="https://wa.me/5561996923908" target="_blank" rel="noopener">Contato</a>
+            </div>
+
+            <!-- Hamburger -->
+            <button id="burger" class="burger" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="mobile-menu-box">
+            <button id="close-mobile" class="close-x">×</button>
+            <ul>
+                <li><a href="#home" class="mobile-link">Início</a></li>
+                <li><a href="#services" class="mobile-link">Serviços</a></li>
+                <li><a href="#portfolio" class="mobile-link">Portfólio</a></li>
+                <li><a href="#contact" class="mobile-link">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Parte 1 - Apresentação -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="./imagens/video.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1>Bem-vindo ao Estúdio<br><span>Cada traço conta uma história</span></h1>
+                <p>Tatuador especializado em realismo, mas apaixonado por todos os estilos de tatuagem.
+                    Cada projeto é feito com técnica, cuidado e dedicação, sempre buscando traduzir a história, emoção e
+                    personalidade de quem está sendo tatuado.<br>
+                    Seja um retrato realista, uma tatuagem minimalista ou um desenho autoral cheio de significado, aqui
+                    o compromisso é o mesmo: criar algo único, feito pra você.</p>
+                <a class="btn primary" href="https://wa.me/5561996923908" target="_blank">Agendar Horário</a>
+            </div>
+            <div class="hero-right">
+                <img src="./imagens/inicio-removebg-preview.png" alt="Tatuagem em destaque" class="hero-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Parte 2 - Serviços -->
+    <section id="services" class="services">
+        <div class="services-content">
+            <h2>Serviços</h2>
+
+            <!-- Carro-chefe -->
+            <div class="featured-service">
+                <div class="card feature">
+                    <img src="assets/realismo.jpg" alt="Realismo">
+                    <h3>Realismo</h3>
+                    <p>Peças hiper-realistas com sombreamento profissional e acabamento refinado.</p>
+                    <a class="btn pulsate"
+                        href="https://wa.me/5561996923908?text=Olá,%20gostaria%20de%20agendar%20um%20horário%20para%20Realismo"
+                        target="_blank">Agendar Horário</a>
+                </div>
+            </div>
+
+            <!-- Outros Serviços (Carrossel) -->
+            <div class="services-carousel-wrapper">
+                <button class="carousel-nav prev">‹</button>
+                <div class="carousel" id="services-carousel">
+                    <div class="carousel-track">
+
+                        <div class="card small">
+                            <img src="assets/servicos/flash.jpg" alt="Flash Tattoo">
+                            <h4>Flash Tattoo</h4>
+                            <p>Desenhos prontos e menores, disponíveis no portfólio do estúdio.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20quero%20agendar%20uma%20Flash%20Tattoo"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                        <div class="card small">
+                            <img src="assets/servicos/coverup.jpg" alt="Cover-up">
+                            <h4>Cobertura de Tatuagens</h4>
+                            <p>Especializado em cobrir tatuagens indesejadas com novos desenhos.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20quero%20um%20orçamento%20para%20cover-up"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                        <div class="card small">
+                            <img src="assets/servicos/retoque.jpg" alt="Retoque">
+                            <h4>Retoque e Restauração</h4>
+                            <p>Revitalização de tatuagens antigas, desbotadas ou malfeitas.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20gostaria%20de%20fazer%20um%20retoque"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                        <div class="card small">
+                            <img src="assets/servicos/oldschool.jpg" alt="Old School">
+                            <h4>Old School</h4>
+                            <p>Linhas grossas e cores sólidas, estilo clássico com âncoras e rosas.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20quero%20uma%20tatuagem%20Old%20School"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                        <div class="card small">
+                            <img src="assets/servicos/blackwork.jpg" alt="Blackwork">
+                            <h4>Blackwork</h4>
+                            <p>Técnica com tinta preta, contrastes e padrões marcantes.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20quero%20saber%20sobre%20Blackwork"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                        <div class="card small">
+                            <img src="assets/servicos/pontilhismo.jpg" alt="Pontilhismo">
+                            <h4>Pontilhismo</h4>
+                            <p>Sombras e texturas formadas por pequenos pontos precisos.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20quero%20uma%20tatuagem%20em%20Pontilhismo"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                        <div class="card small">
+                            <img src="assets/servicos/minimalista.jpg" alt="Minimalista">
+                            <h4>Minimalista</h4>
+                            <p>Tatuagens pequenas, delicadas e com traços finos.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20quero%20fazer%20uma%20tatuagem%20Minimalista"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                        <div class="card small">
+                            <img src="assets/servicos/aquarela.jpg" alt="Aquarela">
+                            <h4>Aquarela</h4>
+                            <p>Estilo que imita o visual artístico das tintas aquareladas.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20quero%20uma%20tatuagem%20em%20Aquarela"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                        <div class="card small">
+                            <img src="assets/servicos/geometrico.jpg" alt="Geométrico">
+                            <h4>Geométrico</h4>
+                            <p>Formas e linhas geométricas para padrões únicos e modernos.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20quero%20uma%20tatuagem%20Geométrica"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                        <div class="card small">
+                            <img src="assets/servicos/geek.jpg" alt="Geek e Comics">
+                            <h4>Geek / Comics</h4>
+                            <p>Personagens de quadrinhos, filmes, jogos e animes em alta qualidade.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20quero%20uma%20tatuagem%20Geek%20ou%20Comics"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                        <div class="card small">
+                            <img src="assets/servicos/oriental.jpg" alt="Oriental">
+                            <h4>Oriental / Japonês</h4>
+                            <p>Temas tradicionais japoneses: dragões, carpas e flores de cerejeira.</p>
+                            <a class="btn small-btn"
+                                href="https://wa.me/5561996923908?text=Olá,%20quero%20uma%20tatuagem%20no%20estilo%20Japonês"
+                                target="_blank">Agendar</a>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="carousel-nav next">›</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Parte 3 - Portfólio -->
+    <section id="portfolio" class="portfolio">
+        <h2>Portfólio</h2>
+        <div class="portfolio-grid"></div>
+    </section>
+
+    <!-- Modal -->
+    <div id="portfolio-modal" class="modal hidden">
+        <button class="modal-close">×</button>
+        <button class="modal-prev">‹</button>
+        <button class="modal-next">›</button>
+        <div class="modal-content">
+            <img src="" alt="" id="modal-img">
+            <p id="modal-desc"></p>
+        </div>
+    </div>
+
+    <!-- Parte 4 - Contato -->
+    <section id="contact" class="contact">
+        <div class="contact-inner">
+            <div class="contact-left">
+                <div class="contact-image-wrap">
+                    <img src="./imagens/remover-removebg-preview.png" alt="Convite para tatuagem">
+                    <div class="contact-caption">Aviso: nossas tatuagens podem causar excesso de estilo e inveja alheia.</div>
+                </div>
+            </div>
+
+            <div class="contact-right">
+                <form id="contact-form" class="contact-form">
+                    <label>Nome<input type="text" name="name" required></label>
+                    <label>Telefone<input type="tel" name="phone" required></label>
+                    <label>Tipo de tatuagem<input type="text" name="type" required></label>
+                    <button type="submit" class="btn submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="separator"></div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="col logo-col">
+                <img src="./imagens/footer1-removebg-preview.png" alt="Logo Estúdio Realismo" class="logo-img">
+                <div class="footer-text">THIAGO MORAIS <span> TATTOO</span></div>
+            </div>
+            <div class="col socials-col">
+                <h4>Redes</h4>
+                <ul class="socials">
+                    <li>
+                        <img src="./imagens/instagram.png" class="icon">
+                        <a href="#" class="social-link">Instagram</a>
+                    </li>
+                    <li>
+                        <img src="./imagens/instagram.png" class="icon">
+                        <a href="#" class="social-link">Facebook</a>
+                    </li>
+                    <li>
+                        <img src="./imagens/instagram.png" class="icon">
+                        <a href="#" class="social-link">TikTok</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col address-col">
+                <h4>Endereço</h4>
+                <p>Tiago Morais Tattoo - Ed. Lê Quartier<br> Águas Claras, Brasília - DF</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3838.3061668744103!2d-48.0272207!3d-15.840497799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3261a886df97%3A0xc4944214fea49032!2sTiago%20Morais%20Tattoo!5e0!3m2!1spt-PT!2sbr!4v1763129455838!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © <span id="year"></span> Estúdio Realismo — Todos os direitos. <span class="signature">Assinatura</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
