@@ -841,10 +841,12 @@ body {
   position: relative;
 }
 
-.contact-image-wrap img {
+.contact-image-wrap video {
   width: 100%;
+  height: 500px;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  display: flex;
 
 }
 
@@ -854,7 +856,7 @@ body {
   left: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.3);
-  color: gold;
+  color: rgb(255, 251, 0);
   text-align: center;
   font-weight: 700;
   padding: 10px 0;
@@ -981,11 +983,12 @@ body {
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+  font-size: 1.2rem;
 }
 
 .icon {
-  width: 20px;
-  height: 20px;
+  width: 35px;
+  height: 35px;
 }
 
 .social-link {
