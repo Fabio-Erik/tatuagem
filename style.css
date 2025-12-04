@@ -1,0 +1,1104 @@
+/* ===============================
+   ESTÚDIO REALISMO - LANDING PAGE
+   =============================== */
+
+/* -------- RESET -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* -------- HEADER / MENU -------- */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.header.scrolled {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+/* Container geral da logo */
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  /* logo em cima, texto embaixo */
+  align-items: center;
+  /* centraliza tudo */
+  text-align: center;
+}
+
+/* Imagem da logo */
+.logo-img {
+  width: 200px;
+  /* ajuste o tamanho como quiser */
+  height: auto;
+}
+
+/* Texto abaixo da logo */
+.logo-text {
+  display: flex;
+  font-size: 10px;
+  font-weight: bold;
+  color: #fff;
+  /* ou a cor que você usa no seu header */
+  letter-spacing: 1px;
+  margin-top: -20px;
+}
+
+.logo-text span {
+  color: #D9B64E;
+  /* destaque para "REALISMO" */
+  margin-left: 6px;
+  /* pode ajustar o valor */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: gold;
+}
+
+.contact-fixed a {
+  background: gold;
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.contact-fixed a:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid gold;
+  box-shadow: 0 0 8px gold;
+}
+
+/* -------- BURGER MENU -------- */
+.burger {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border: none;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 20px;
+  height: 2px;
+  background: #fff;
+}
+
+/* -------- MOBILE MENU -------- */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.mobile-menu-box {
+  background: #111;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.mobile-menu-box ul {
+  list-style: none;
+}
+
+.mobile-menu-box li {
+  margin: 20px 0;
+}
+
+.mobile-menu-box a {
+  color: gold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.mobile-menu-box a:hover {
+  color: #fff;
+}
+
+.close-x {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+/* -------- HERO -------- */
+.hero {
+  position: relative;
+  height: 100vh;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.hero-left {
+  width: 50%;
+  z-index: 2;
+}
+
+.hero-left h1 {
+  font-family: "Rye";
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.hero-left h1 span {
+  font-family: "Rye";
+  color: gold;
+  font-weight: 400;
+}
+
+.hero-left p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #ddd;
+  font-weight: 600;
+}
+
+.hero-right {
+  width: 45%;
+  position: relative;
+}
+
+.hero-img {
+  height: auto;
+  width: auto;
+  border-radius: 10px;
+
+}
+
+/* -------- BOTÕES -------- */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.hero-left .btn {
+  display: block;
+  margin: 20px auto 0 auto;
+  /* centraliza o botão */
+  text-align: center;
+}
+
+.btn.primary {
+  background: gold;
+  color: #000;
+}
+
+.btn.primary:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid gold;
+  box-shadow: 0 0 8px gold;
+}
+
+.btn.pulsate {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 5px #00ff73;
+  }
+
+  50% {
+    box-shadow: 0 0 20px #00ff73;
+  }
+
+  100% {
+    box-shadow: 0 0 5px #00ff73;
+  }
+}
+
+.btn.submit {
+  background: gold;
+  color: #000;
+}
+
+.btn.submit:hover {
+  background: #000;
+  color: gold;
+  border: 1px solid gold;
+}
+
+/* ===================== SEÇÃO DE SERVIÇOS ===================== */
+.services {
+  position: relative;
+  padding: 100px 40px;
+  background: url("./imagens/fundodo.png") center/cover fixed no-repeat;
+}
+
+.services::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 8, 8, 0.7);
+}
+
+.services-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1300px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+}
+
+.services-content h2 {
+  font-family: "Rye";
+  font-size: 3.5em;
+  margin-bottom: 50px;
+  color: gold;
+  letter-spacing: 2px;
+  font-weight: 400;
+  
+}
+
+/* Estiliza apenas os títulos da seção Serviços */
+#services h3,
+#services h4 {
+  font-family: "Rye", serif;
+  /* coloque a fonte que preferir */
+  font-weight: 200;
+  /* opcional – remove negrito se quiser */
+}
+
+.featured-service {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+
+.featured-service .card.feature {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  padding: 30px;
+  width: 350px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featured-service .card.feature:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px gold;
+}
+
+.featured-service img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.featured-service .btn.pulsate {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+  animation: pulse 1.5s infinite;
+}
+
+.featured-service .btn.pulsate:hover {
+  background: black;
+  border: 2px solid white;
+  box-shadow: 0 0 10px white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.6);
+  }
+
+  70% {
+    box-shadow: 0 0 0 15px rgba(40, 167, 69, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+/* --- Carrossel de Serviços --- */
+
+#services-carousel {
+  overflow: hidden;
+  /* esconde os cards que ficam fora da área visível */
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+#services-carousel {
+  display: flex;
+  gap: 15px;
+}
+
+/* Correção de Layout para o Carrossel */
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: flex-start;
+  transition: transform 0.5s ease;
+}
+
+/* Regra principal para 5 cards por tela (Desktop) */
+.carousel-track .card {
+  flex: 0 0 calc(20% - 16px);
+}
+
+#services-carousel .card {
+  /* flex: 0 0 calc(20% - 15px); - REMOVIDO */
+  box-sizing: border-box;
+}
+
+#services-carousel .card:hover {
+  transform: scale(1.05);
+  /* efeito de destaque */
+  z-index: 10;
+  /* garante que fique sobre os outros */
+}
+
+.services-carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel {
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+
+  padding: 0 40px;
+}
+
+.card.small {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 300px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  color: #fff;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.card.small img {
+  width: 100%;
+  /* Adicionado: Define uma altura fixa para todas as imagens. Ajuste 200px se quiser mais ou menos altura. */
+  height: 200px;
+  /* Adicionado: Garante que a imagem cubra toda a área, cortando o excesso se necessário. */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.card.small:hover {
+  transform: scale(1.05);
+  border-color: gold;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Botões pequenos dos serviços */
+.card.small .btn.small-btn {
+  background: transparent;
+  border: 2px solid gold;
+  color: gold;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.card.small .btn.small-btn:hover {
+  background: gold;
+  color: black;
+}
+
+/* --- Setas de Navegação --- */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  color: gold;
+  border: none;
+  font-size: 2em;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.carousel-nav:hover {
+  background: gold;
+  color: black;
+  box-shadow: 0 0 15px gold;
+}
+
+.carousel-nav.prev {
+  left: 0;
+}
+
+.carousel-nav.next {
+  right: 0;
+}
+
+/* -------- PORTFÓLIO -------- */
+.portfolio {
+  background: #000;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.portfolio h2 {
+  font-family: "Rye";
+  font-size: 3.5em;
+  margin-bottom: 50px;
+  color: gold;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 imagens por fileira */
+  gap: 15px;
+  /* espaço entre as imagens */
+
+}
+
+.portfolio-grid .item img {
+  height: 250px;
+  /* altura igual para todas */
+  width: 100%;
+  /* ocupa toda a largura do item */
+  object-fit: cover;
+  /* mantém proporção e corta excesso se necessário */
+  border-radius: 8px;
+  /* opcional: cantos arredondados */
+  cursor: pointer;
+  /* mostra o ponteiro ao passar o mouse */
+  transition: transform 0.3s ease;
+}
+
+.portfolio-grid .item:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px gold;
+}
+
+/* ===================== PORTFÓLIO ===================== */
+.portfolio {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.portfolio-grid .item img:hover {
+  transform: scale(1.05);
+}
+
+/* Botão Ver Mais */
+.btn-ver-mais {
+  width: 60%;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: gold;
+  color: #000;
+  display: block;
+  margin: 20px auto 0 auto;
+  /* centraliza o botão */
+  text-align: center;
+}
+
+.btn-ver-mais:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid gold;
+  box-shadow: 0 0 8px gold;
+}
+
+/* ===================== GALERIA COMPLETA ===================== */
+.galeria {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 60px;
+  overflow-y: auto;
+  z-index: 9999;
+}
+
+.galeria.show {
+  display: flex;
+}
+
+.galeria-content {
+  width: 90%;
+  max-width: 1000px;
+  text-align: center;
+  color: white;
+}
+
+.galeria-grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.galeria-grid .item img {
+  height: 250px;
+  /* altura igual para todas */
+  width: 100%;
+  /* ocupa toda a largura do item */
+  object-fit: cover;
+  /* mantém proporção e corta excesso se necessário */
+  border-radius: 8px;
+  /* opcional: cantos arredondados */
+  cursor: pointer;
+  /* mostra o ponteiro ao passar o mouse */
+  transition: transform 0.3s ease;
+}
+
+.galeria-grid .item img:hover {
+  transform: scale(1.05);
+}
+
+.btn-fechar-galeria {
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-fechar-galeria:hover {
+  background: darkred;
+}
+
+/* -------- MODAL -------- */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 3000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.modal-content img {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.modal-content p {
+  margin-top: 15px;
+  color: #fff;
+  font-style: italic;
+}
+
+.modal-close,
+.modal-prev,
+.modal-next {
+  position: absolute;
+  background: none;
+  border: none;
+  color: gold;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modal-close {
+  top: 20px;
+  right: 30px;
+}
+
+.modal-prev {
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.modal-next {
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* -------- CONTATO -------- */
+.contact {
+  background: url('./imagens/fundo.jpeg') center/cover fixed;
+  position: relative;
+  padding: 100px 20px;
+}
+
+.contact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.contact-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-left,
+.contact-right {
+  width: 48%;
+}
+
+.contact-image-wrap {
+  position: relative;
+}
+
+.contact-image-wrap video {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  display: flex;
+
+}
+
+.contact-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  color: rgb(255, 251, 0);
+  text-align: center;
+  font-weight: 700;
+  padding: 10px 0;
+  border-radius: 0 0 10px 10px;
+}
+
+.contact-form {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.contact-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+}
+
+/* -------- SEPARADOR -------- */
+.separator {
+  height: 1px;
+  background: #fff;
+  width: 100%;
+  box-shadow: 0 0 10px #fff;
+}
+
+/* -------- FOOTER -------- */
+.footer {
+  position: relative;
+  background: url("./imagens/logo sem fundo.png") repeat-x center;
+  padding: 0px 20px;
+  z-index: 1;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  /* véu preto */
+  z-index: -1;
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.logo-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* opcional */
+
+}
+
+.logo-img {
+  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.6));
+}
+
+.footer-text {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  /* ou a cor que você usa no seu header */
+  letter-spacing: 1px;
+  margin-top: -20px;
+  z-index: 10;
+}
+
+.footer-text span {
+  color: #D9B64E;
+  /* destaque para "REALISMO" */
+  margin-left: 6px;
+  /* pode ajustar o valor */
+}
+
+.footer .col h4 {
+  font-family: "Rye";
+  color: gold;
+  margin-bottom: 10px;
+  font-weight: 100;
+  font-size: 1.5rem;
+}
+
+.socials {
+  list-style: none;
+}
+
+.socials-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* horizontal */
+  justify-content: center;
+  /* vertical */
+  text-align: center;
+}
+
+.socials li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+}
+
+.social-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.social-link:hover {
+  color: gold;
+}
+
+.address-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* centraliza verticalmente */
+  align-items: center;
+}
+
+.address-col p {
+  text-align: center;
+}
+
+.footer iframe {
+  width: 100%;
+  height: 150px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.signature {
+  color: gold;
+  cursor: pointer;
+}
+
+.signature:hover {
+  color: #fff;
+}
+
+/* -------- RESPONSIVIDADE -------- */
+@media (max-width: 900px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header {
+    height: auto;
+  }
+
+  .logo-container {
+    margin-left: -10%;
+  }
+
+  .nav-list li a {
+    display: none;
+  }
+
+  #home {
+    height: auto;
+  }
+
+  .hero-left {
+    width: 80%;
+    margin-top: 10%;
+  }
+
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-img {
+    height: 500px;
+    width: auto;
+    border-radius: 10px;
+  }
+
+  .contact-inner {
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    width: 100%;
+  }
+
+  .logo-col {
+    margin-left: 15%;
+    /* opcional */
+  }
+
+  .address-col {
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav-list,
+  .contact-fixed {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+  .services-content h2 {
+    display: flex;
+  font-family: "Rye";
+  font-size: 40px;
+  margin-bottom: 0px;
+  color: gold;
+  letter-spacing: 2px;
+  font-weight: 400;
+
+  
+}
+
+  .carousel-wrapper {
+    /* Garante que o container do carrossel (pai de .carousel) não fique muito largo */
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel {
+
+    transform: translateX(-20px);
+    width: 80%;
+  }
+
+  .card.small {
+    flex: 0 0 calc(100% - 84px);
+    margin: 0;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .card.small {
+    flex: 0 0 calc(100% - 84px);
+    margin: 0;
+  }
+
+  .hero-left h1 {
+    font-size: 1.8rem;
+  }
+}
